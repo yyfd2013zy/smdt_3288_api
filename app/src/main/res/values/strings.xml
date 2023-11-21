@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">AndroidApi</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="versions_name">API Version</string>
+    <string name="can_not_find_version_name">Cannot find API version</string>
+    <string name="interface_shutdown">Shutdown</string>
+    <string name="interface_getipaddr">Get IP Address</string>
+    <string name="interface_setpowerofftime">Change Settings Time (Enter value first, then click button)</string>
+    <string name="btn_screen">Screenshot</string>
+    <string name="model">Model</string>
+    <string name="android_version">Android Version</string>
+    <string name="running">Running Memory</string>
+    <string name="inner">Internal Storage</string>
+    <string name="firware">Firmware Version</string>
+    <string name="kernel">Kernel Version</string>
+    <string name="version">Version Number</string>
+    <string name="openwifi">Enable Wi-Fi</string>
+    <string name="closewifi">Disable Wi-Fi</string>
+    <string name="connectwifi">Connect to Wi-Fi</string>
+    <string name="disconnectwifi">Disconnect Wi-Fi</string>
+    <string name="et_year">Year</string>
+    <string name="et_month">Month</string>
+    <string name="et_day">Day</string>
+    <string name="et_hour">Shutdown Time (14:20)</string>
+    <string name="et_minute">Startup Time (14:30)</string>
+    <string name="et_enable">Enable Schedule Power On/Off</string>
+    <string name="edit_setBright">Set Brightness</string>
+    <string name="smdt">Shenzhen Smit Corporation Ltd. has been committed to the development of commercial display intelligent mainboards and overall solutions, providing intelligent mainboard software and hardware platforms, O2O intelligent retail devices, and equipment operation platforms for the commercial display industry.
+        Service areas: Smart digital signage, smart retail terminals, smart lockers, virtual display devices, robots, smart home devices.
+        Targeting the Internet of Things (IoT), with continuously developed and accumulated technological advantages and production management experience, it guarantees product quality and technical services.</string>
+    <string name="usb_num">USB Port (1~3)</string>
+    <string name="gpio_num">GPIO Port (1~10)</string>
+    <string name="read_gpio">Read GPIO</string>
+    <string name="write_gpio">Write GPIO (1~10)</string>
+    <string name="write_gpio_value">Write GPIO Value (0 or 1)</string>
+    <string name="set_gpio_direction">Set GPIO Direction (0: input or 1: output)</string>
+    <string name="gpio_direction">0: input, 1: output</string>
+    <string name="open_eth_power">Enable Ethernet Power</string>
+    <string name="close_eth_power">Disable Ethernet Power</string>
+    <string name="get_eth_status">Get Ethernet Status</string>
+    <string name="eth_status">Ethernet Status</string>
+    <string name="three_poweronoff">3 Minutes On, 3 Minutes Off</string>
+    <string name="HeadsetMic">Headset Mic</string>
+    <string name="MicOn">Enable Mic</string>
+    <string name="MicOff">Disable Mic</string>
+    <string name="volume_normal">Normal</string>
+    <string name="volume_mute">Mute</string>
+
+    <string-array name="uart_path">
+        <item>uart0</item>
+        <item>uart1</item>
+        <item>uart2</item>
+        <item>uart3</item>
+        <item>uart4</item>
+        <item>uart5</item>
+        <item>uart6</item>
+        <item>uart7</item>
+    </string-array>
+    <string-array name="gpio_array">
+        <item>GPIO_1</item>
+        <item>GPIO_2</item>
+        <item>GPIO_3</item>
+        <item>GPIO_4</item>
+        <item>GPIO_5</item>
+        <item>GPIO_6</item>
+        <item>GPIO_7</item>
+        <item>GPIO_8</item>
+        <item>GPIO_9</item>
+        <item>GPIO_10</item>
+    </string-array>
+    <string-array name="gpio_array_w">
+        <item>GPIO_0</item>
+        <item>GPIO_1</item>
+        <item>GPIO_2</item>
+        <item>GPIO_3</item>
+        <item>GPIO_4</item>
+        <item>GPIO_5</item>
+        <item>GPIO_6</item>
+        <item>GPIO_7</item>
+    </string-array>
+    <string-array name="gpio_dir">
+        <item>Input</item>
+        <item>Output</item>
+    </string-array>
+    <string-array name="gpio_hw">
+        <item>Low Level (Only valid when GPIO is in output mode)</item>
+        <item>High Level (Only valid when GPIO is in output mode)</item>
+    </string-array>
+
+</resources>

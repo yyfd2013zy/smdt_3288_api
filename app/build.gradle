@@ -1,0 +1,37 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion "28.0.3"
+    signingConfigs {
+        common {
+            keyAlias 'key0'
+            keyPassword 'android'
+            storeFile file('./keystore/zwj_sign.jks')
+            storePassword 'android'
+        }
+    }
+    defaultConfig {
+        applicationId "com.smdt.androidapi"
+        minSdkVersion 17
+        targetSdkVersion 28
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+            signingConfig signingConfigs.common
+        }
+        debug {
+            minifyEnabled false
+            debuggable true
+            signingConfig signingConfigs.common
+        }
+    }
+}
+
+dependencies {
+    implementation 'com.android.support:support-v4:23.4.0'
+    implementation files('src/libs/smdt.jar')
+}

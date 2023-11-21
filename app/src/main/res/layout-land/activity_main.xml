@@ -1,0 +1,1672 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.smdt.androidapi.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1.system control"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/button_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:text="Shut down the system (click the button)" />
+
+            <Button
+                android:id="@+id/button_reboot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="36dp"
+                android:text="reboot" />
+
+            <Button
+                android:id="@+id/button_three_poweronoff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="36dp"
+                android:text="@string/three_poweronoff" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2.Timing on/off machine"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/edit_hour"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:hint="@string/et_hour" />
+
+            <EditText
+                android:id="@+id/edit_minute"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:hint="@string/et_minute" />
+
+            <EditText
+                android:id="@+id/edit_enable"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:hint="@string/et_enable"
+                android:inputType="number"
+                android:text="1" />
+
+            <Button
+                android:id="@+id/set_power_off_on_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:text="Set the timed on/off time" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3.Network"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/button_get_nettype"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:text="Get the current network type" />
+
+            <TextView
+                android:id="@+id/edit_get_net_type"
+                android:layout_width="400dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:hint="After clicking the button, the current network type will be displayed here"
+                android:textSize="24sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4.screenshot"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/button_takepictrue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="76dp"
+                android:text="1.The MP4 video is stored in the system memory, and then click the screenshot button. The screen will jump and play the video, and then click the button below. The screenshot image is stored in the pictures directory of the system" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5.APK installation"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="44dp"
+                android:text="past："
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/button_silentInstall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Place Update.apk in the system storage root directory and click the button" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="44dp"
+                android:text="New: Prompt for completion of operation"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btn_new_install"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="As shown on the left, click on Install" />
+
+            <EditText
+                android:id="@+id/edt_new_uninstall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="com.robozox.sensor.box" />
+
+            <Button
+                android:id="@+id/btn_new_uninstall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Uninstalling APK" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6.Gpio"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btn_gpio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="76dp"
+                android:text="Gpio" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="7.Device Information"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btn_devices"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:text="About device information" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8.Serial port control"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btn_uart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:text="Obtain the serial port path (click the button first, then drop down the box next to it)" />
+
+            <Spinner
+                android:id="@+id/spin_dev"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:entries="@array/uart_path" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp" />
+
+            <!-- <Button
+                android:id="@+id/btn_serialreceive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:text="接收"/>
+
+            <Button
+                android:id="@+id/btn_serialsend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:text="发送"/> -->
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="9.UPGRADE"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btn_update"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:text="Upgrade update.zip (first store the update.zip package in the root directory inside the system, and then click the button)" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10.time control"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/et_year"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="36dp"
+                    android:hint="@string/et_year"
+                    android:numeric="integer" />
+
+                <EditText
+                    android:id="@+id/et_month"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:hint="@string/et_month"
+                    android:numeric="integer" />
+
+                <EditText
+                    android:id="@+id/et_day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:hint="@string/et_day"
+                    android:numeric="integer" />
+
+                <EditText
+                    android:id="@+id/et_hour"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:hint="hour"
+                    android:numeric="integer" />
+
+                <EditText
+                    android:id="@+id/et_minute"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:hint="min"
+                    android:numeric="integer" />
+
+                <Button
+                    android:id="@+id/button_settime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:text="Change setting time" />
+
+                <Button
+                    android:id="@+id/button_settimebynet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:text="Synchronize network time" />
+
+                <Button
+                    android:id="@+id/button_settimebynetoff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:text="Cancel synchronization of network time" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edt_set_ntp_server"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="100dp"
+                    android:text="time.windows.com" />
+
+                <Button
+                    android:id="@+id/btn_set_ntp_server"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:text="Set NTP time server" />
+
+                <Button
+                    android:id="@+id/btn_get_ntp_server"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:text="Obtain NTP time server" />
+
+                <TextView
+                    android:id="@+id/tv_get_ntp_server"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="11.WiFi control"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btn_wifi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:text="WiFi control" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12.Status bar switch"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btn_showstatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:text="show the status bar" />
+
+            <Button
+                android:id="@+id/btn_hidestatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:text="hide the status bar" />/>
+
+            <Button
+                android:id="@+id/btn_enable_guester_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:text="Open status bar gesture" />
+
+            <Button
+                android:id="@+id/btn_disable_guester_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:text="Close status bar gesture" />/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="13.rotation"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btn_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="34dp"
+                android:text="0" />
+
+            <Button
+                android:id="@+id/btn_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:text="90" />
+
+            <Button
+                android:id="@+id/btn_three"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:text="180" />
+
+            <Button
+                android:id="@+id/btn_four"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:text="270" />/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="14.backlight control"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="34dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="34dp"
+                    android:text="LVDS:"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/btn_openback"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="34dp"
+                    android:text="open" />
+
+                <Button
+                    android:id="@+id/btn_closeback"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:text="close" />
+
+                <Button
+                    android:id="@+id/btn_getback"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="34dp"
+                    android:text="Obtain the status value of the switch screen " />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="34dp"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="34dp"
+                    android:text="EDP  :"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/btn_open_edp_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="34dp"
+                    android:text="open" />
+
+                <Button
+                    android:id="@+id/btn_close_edp_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:text="close" />
+
+                <Button
+                    android:id="@+id/btn_get_edp_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="34dp"
+                    android:text="Obtain the status value of the switch screen " />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="15.system log"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btn_openlog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="34dp"
+                android:text="on" />
+
+            <Button
+                android:id="@+id/btn_closelog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:text="off" />/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="16.Sound control"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btn_volumeadd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:text="volume+" />
+
+            <Button
+                android:id="@+id/btn_volumedec"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:text="volume-" />
+
+            <Button
+                android:id="@+id/btn_mute"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:text="mute" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="17.brightness"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btn_bright"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="34dp"
+                android:text="Set Brightness" />
+
+            <EditText
+                android:id="@+id/edit_setBright"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="34dp"
+                android:hint="@string/edit_setBright"
+                android:numeric="integer" />
+
+            <Button
+                android:id="@+id/btn_getBright"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="34dp"
+                android:text="Obtain brightness value" />
+
+            <TextView
+                android:id="@+id/tv_bright"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="34dp"
+                android:text="Display brightness value" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="18.set volume"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btn_setVolume"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="34dp"
+                android:text="Set sound values" />
+
+            <EditText
+                android:id="@+id/edit_values"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="34dp"
+                android:hint="Enter volume value(1~15)"
+                android:numeric="integer" />
+
+            <Button
+                android:id="@+id/btn_getVolume"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="34dp"
+                android:text="Obtain sound value" />
+
+            <TextView
+                android:id="@+id/txt_volume_show"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:hint="Obtain volume value"
+                android:textSize="24sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="19.Obtain network IP and Mac address"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btn_getmac"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="34dp"
+                android:text="Get Network Mac Address" />
+
+            <TextView
+                android:id="@+id/tv_showMac"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="34dp"
+                android:text="Show Mac address"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btn_getIP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="34dp"
+                android:text="Obtain network IP address" />
+
+            <TextView
+                android:id="@+id/tv_showIP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="34dp"
+                android:text="Display IP address"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/tv_setIP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="34dp"
+                android:digits="0123456789."
+                android:hint="Display the IP address to be set"
+                android:inputType="number"
+                android:text="192.9.50.155"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/tv_set_mast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="34dp"
+                android:digits="0123456789."
+                android:hint="mask"
+                android:inputType="number"
+                android:text="255.255.254.0"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/tv_set_gw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="34dp"
+                android:digits="0123456789."
+                android:hint="gateway"
+                android:inputType="number"
+                android:text="192.9.50.1"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/tv_set_dns"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="34dp"
+                android:digits="0123456789."
+                android:hint="dns"
+                android:inputType="number"
+                android:text="192.9.50.1"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btn_setIP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="34dp"
+                android:text="Set Ethernet IP address" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20.route"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btn_sd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="34dp"
+                android:text="Obtain SD card path" />
+
+            <TextView
+                android:id="@+id/tv_sd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="34dp"
+                android:hint="Display SD card path"
+                android:numeric="integer" />
+
+            <Button
+                android:id="@+id/btn_USB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="34dp"
+                android:text="Obtain USB path" />
+
+            <EditText
+                android:id="@+id/edit_usb_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="34dp"
+                android:hint="Enter USB serial number"
+                android:numeric="integer" />
+
+            <TextView
+                android:id="@+id/tv_USB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="34dp"
+                android:hint="Display USB path" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="21.Switch the door opening dog"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btn_watchdog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:text="Opening the door dog" />
+
+            <Button
+                android:id="@+id/btn_closedog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:text="Close the door opener" />
+
+            <Button
+                android:id="@+id/btn_feeddog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:text="feed dog" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="22.USB"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btn_openUSB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:text="Turn on USB power" />
+
+            <Button
+                android:id="@+id/btn_closeUSB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:text="Turn off USB power" />
+
+
+            <EditText
+                android:id="@+id/tv_usbNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="34dp"
+                android:hint="@string/usb_num"
+                android:numeric="integer" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="23.Switch Ethernet"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btn_openEthPower"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:text="@string/open_eth_power" />
+
+            <Button
+                android:id="@+id/btn_closeEthPower"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:text="@string/close_eth_power" />
+
+            <Button
+                android:id="@+id/btn_getEth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:text="@string/get_eth_status" />
+
+            <TextView
+                android:id="@+id/tv_eth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="34dp"
+                android:hint="@string/eth_status" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="24.Screen parameters"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btn_screenWidth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="34dp"
+                android:text="Get Screen Width" />
+
+            <TextView
+                android:id="@+id/tv_screenWidth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="screen width"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btn_screenHeight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="34dp"
+                android:text="Obtain screen height" />
+
+            <TextView
+                android:id="@+id/tv_screenHeight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Screen height"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="24.eeprom"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_deviceId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:hint="deviceId(Starting from 0)"
+                android:numeric="integer" />
+
+            <EditText
+                android:id="@+id/et_areaId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:hint="Area ID (starting from 1)"
+                android:numeric="integer" />
+
+            <EditText
+                android:id="@+id/et_start_addr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:hint="Superstart Address"
+                android:numeric="integer" />
+
+            <EditText
+                android:id="@+id/et_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:hint="Length"
+                android:numeric="integer" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_write_eeprom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="Write eeprom" />
+
+            <EditText
+                android:id="@+id/et_eeprom_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:hint="EEPROM data" />
+
+            <Button
+                android:id="@+id/btn_read_eeprom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="READ EEPROM" />
+
+            <TextView
+                android:id="@+id/tv_read_eeprom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Eeprom data"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="25.API"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btn_get_api_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="34dp"
+                android:text="Obtain API version" />
+
+            <TextView
+                android:id="@+id/tv_api_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="API version"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="25.3G"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btn_3G_open"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="34dp"
+                android:text="ON" />
+
+            <Button
+                android:id="@+id/btn_3G_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="34dp"
+                android:text="Off" />
+
+            <Button
+                android:id="@+id/btn_3G_reset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="34dp"
+                android:text="3G reset" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="26.LED"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btn_led_open"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="34dp"
+                android:text="led ON" />
+
+            <Button
+                android:id="@+id/btn_led_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="34dp"
+                android:text="led Off" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="27.MIC"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btn_headsetmic_open"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="34dp"
+                android:text="Headphone mic on" />
+
+            <Button
+                android:id="@+id/btn_headsetmic_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="34dp"
+                android:text="Earphone mic off" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="28.Uninstalling USB drive/SD card"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btn_unmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="34dp"
+                android:text="Uninstalling USB drive/SD card" />
+
+            <EditText
+                android:id="@+id/et_unmount_path"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:hint="Fill in the path of the SD card or USB to be uninstalled" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="29.Dual screen display"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btn_get_screen_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="34dp"
+                android:text="Get screen_ Number" />
+
+            <TextView
+                android:id="@+id/tv_screen_number1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Screen_ The value of number"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="30.hdmi in"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btn_get_hdmiin_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="34dp"
+                android:text="Obtain hdmi in status" />
+
+            <Button
+                android:id="@+id/btn_open_hdmiin_audio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="34dp"
+                android:text="Turn on hdmi in sound" />
+
+            <Button
+                android:id="@+id/btn_close_hdmiin_audio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="34dp"
+                android:text="Turn off hdmi in sound" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <!--  TextView
+                android:id="@+id/tv_Pos_Cash_Box_Text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="31.Pos Cash"/>
+
+             <Button
+                 android:id="@+id/btn_Pos_Cash_Box_Open"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginLeft="34dp"
+                 android:text="打开钱箱"/-->
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="32.Secondary screen parameters"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btn_extendscreenWidth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="34dp"
+                android:text="Obtain secondary screen width" />
+
+            <TextView
+                android:id="@+id/tv_extendscreenWidth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Secondary screen width"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btn_extendscreenHeight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="34dp"
+                android:text="Obtain the height of the secondary screen" />
+
+            <TextView
+                android:id="@+id/tv_extendscreenHeight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Secondary screen height"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="34.Switch debugging mode"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btn_open_usb_debug"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="34dp"
+                android:text="Open USB debugging" />
+
+            <Button
+                android:id="@+id/btn_close_usb_debug"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="34dp"
+                android:text="Turn off USB debugging" />
+
+            <Button
+                android:id="@+id/btn_open_net_debug"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="34dp"
+                android:text="Open Network Debugging" />
+
+            <Button
+                android:id="@+id/btn_close_net_debug"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="34dp"
+                android:text="Turn off network debugging" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="34.Hide Soft Keyboard"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btn_hide_softkeyboard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="34dp"
+                android:text="Hide Soft Keyboard" />
+
+            <Button
+                android:id="@+id/btn_show_softkeyboard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="34dp"
+                android:text="Display soft keyboard" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="35.Prohibit button touch reporting"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btn_reject_key"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="34dp"
+                android:text="Prohibit button reporting" />
+
+            <Button
+                android:id="@+id/btn_allow_key"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="34dp"
+                android:text="Allow button reporting" />
+
+            <Button
+                android:id="@+id/btn_reject_tourch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="34dp"
+                android:text="No touching" />
+
+            <Button
+                android:id="@+id/btn_allow_touch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="34dp"
+                android:text="Allow touch" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="37.Uninstall application switch"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btn_allow_uninstall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="34dp"
+                android:text="Allow uninstallation of apps" />
+
+            <Button
+                android:id="@+id/btn_forbid_uninstall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="34dp"
+                android:text="Prohibit uninstalling apps" />
+
+            <Button
+                android:id="@+id/btn_uninstall_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="34dp"
+                android:text="Obtain the unloading switch value" />
+
+            <TextView
+                android:id="@+id/tv_uninstall_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="36.Installing application switches"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/btn_allow_install"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="34dp"
+                    android:text="Allow app installation" />
+
+                <Button
+                    android:id="@+id/btn_forbid_install"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="34dp"
+                    android:text="Prohibit installation of applications" />
+
+                <Button
+                    android:id="@+id/btn_install_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="34dp"
+                    android:text="Obtain installation switch values" />
+
+                <TextView
+                    android:id="@+id/tv_install_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/edt_install_white_list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="34dp"
+                    android:text="com.android.test" />
+
+                <Button
+                    android:id="@+id/btn_add_install_white_list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add app whitelist" />
+
+                <EditText
+                    android:id="@+id/remove_install_white_list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="34dp"
+                    android:text="com.android.test" />
+
+                <Button
+                    android:id="@+id/btn_remove_install_white_list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Remove app whitelist" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_get_install_whitelist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="80dp"
+                    android:text="Obtain installation whitelist: install when installation is prohibited" />
+
+                <TextView
+                    android:id="@+id/tv_get_install_whitelist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="38.Keyboard Event Listening"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btn_key_broadcast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="34dp"
+                android:text="Click on the Button to register for keyboard monitoring, and then click on the keyboard" />
+
+            <TextView
+                android:id="@+id/tv_key_broadcast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</ScrollView>
